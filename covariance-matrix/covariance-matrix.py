@@ -9,7 +9,7 @@ def covariance_matrix(X: list) -> np.ndarray:
     N = X.shape[0]
     X_center = X - np.mean(X, axis=0)
 
-    Cov_matrix = (np.matmul(X_center.transpose(), X_center)) / (X.shape[0]-1)
+    Cov_matrix = (np.matmul(X_center.T, X_center)) / (X.shape[0]-1)
     return np.array(Cov_matrix)
     
     pass
